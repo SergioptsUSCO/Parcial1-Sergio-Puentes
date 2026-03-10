@@ -13,10 +13,10 @@ function modoOscuro() {
 
 let carrito = 0
 
-function agregarCarrito() {
-
+function agregarCarrito(texto) {
+    alert("Producto agregado al carrito: " + texto)
     carrito++
-    console.log("Productos en carrito: " + carrito)
+    alert("Productos en carrito: " + carrito)
 
 }
 
@@ -36,13 +36,13 @@ function enviarFormulario() {
     if (nombre == "" || nombre.test("\w+$") == false) {
         alert("Datos incorrectos, por favor ingresa un nombre válido")
     }
-        else if (apellido == ""|| apellido.test(/^\w$/) == false) {
+        else if (apellido == ""|| apellido.test(/^\w+$/) == false) {
             alert("Datos incorrectos, por favor ingresa un apellido válido")
         }
-        else if (correo == "" || correo.test(/^(a-zA-z0-9)+@([a-z])+\.com$/) == false) {
+        else if (correo == "" || correo.test(/^(a-zA-Z0-9)+@([a-z])+\.com$/) == false) {
             alert("Datos incorrectos, por favor ingresa un correo válido")
         }
-        else if (con_correo == "" || con_correo.test(/^(a-zA-z0-9)+@([a-z])+\.com$/) == false || con_correo != correo) {
+        else if (con_correo == "" || con_correo.test(/^(a-zA-Z0-9)+@([a-z])+\.com$/) == false || con_correo != correo) {
             alert("Datos faltates o incorrectos, por favor confirma tu correo")
         }
         else if (edad == "" || edad.test(/\d/ig) == false) {
